@@ -11,6 +11,7 @@ import ImageSlider from "../core/modal/ImageSlider";
 import travelPackages from "../../data/data.json";
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { Gallery } from "./Gallery";
 
 type travelPackage = {
   title: string;
@@ -52,6 +53,7 @@ const HomePage = () => {
           ))}
         </Grid>
       </Container>
+      <Gallery />
     </div>
   );
 };
