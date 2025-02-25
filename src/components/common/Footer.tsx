@@ -9,7 +9,14 @@ export const Footer = () => {
     >
       <Container>
         <Typography variant="body1">
-          <Link href="https://webtechpie.com/">Webtechpie</Link>
+          <Link
+            href="https://webtechpie.com/"
+            color="inherit"
+            underline="none"
+            fontSize={15}
+          >
+            Webtechpie
+          </Link>
           &copy; 2025 Hello Travel India All rights reserved
         </Typography>
         <Box sx={{ mt: 1 }}>
