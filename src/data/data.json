@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Kashmir Getaway",
+    "image": "https://www.captureatrip.com/_next/image?url=https%3A%2F%2Fcaptureatrip.s3.amazonaws.com%2Fuploads%2Ftrip%2Fimages%2Fbanner%2F6635d714-6932-498a-932a-0cc4d834fdc3.jpg&w=3840&q=75",
+    "description": "Experience the beauty of Kashmir with our exclusive travel package."
+  },
+  {
+    "title": "Himalayan Adventure",
+    "image": "https://assets.newatlas.com/dims4/default/3e54e84/2147483647/strip/true/crop/1080x720+0+190/resize/1200x800!/quality/90/?url=http%3A%2F%2Fnewatlas-brightspot.s3.amazonaws.com%2F3b%2F27%2F074c200842838431ec67820434bf%2Fgallery-1.jpg",
+    "description": "Trek through the Himalayas and explore breathtaking landscapes."
+  },
+  {
+    "title": "Luxury Houseboats",
+    "image": "https://images.trvl-media.com/lodging/90000000/89770000/89765800/89765708/676d36ac.jpg?impolicy=resizecrop&rw=575&rh=575&ra=fill",
+    "description": "Stay in a luxurious houseboat on Dal Lake and enjoy serene views."
+  }
+]
