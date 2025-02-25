@@ -19,7 +19,7 @@ import Link from "next/link";
 
 const navLinks = [
   { text: "Home", href: "/" },
-  { text: "Products", href: "/products" },
+  { text: "Packages", href: "/packages" },
   { text: "About", href: "/about" },
   { text: "Contact", href: "/contact" },
 ];
@@ -33,9 +33,18 @@ const Navbar = () => {
   };
 
   return (
-    <AppBar position="sticky" sx={{ backgroundColor: "#1976d2" }}>
+    <AppBar position="sticky" sx={{ backgroundColor: "#c0cad4" }}>
       <Toolbar>
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+        <Typography
+          variant="h6"
+          component="div"
+          sx={{
+            flexGrow: 1,
+            color: "#6462fc",
+            fontFamily: "sans-serif",
+            fontWeight: "600",
+          }}
+        >
           Hello Travel India
         </Typography>
 
@@ -46,9 +55,11 @@ const Navbar = () => {
                 <Typography
                   variant="button"
                   sx={{
-                    color: "#fff",
+                    color: "black",
                     textDecoration: "none",
-                    "&:hover": { color: "#ffeb3b" },
+                    fontWeight: "900",
+                    fontFamily: "sans-serif",
+                    "&:hover": { color: "#1916d1" },
                   }}
                 >
                   {link.text}
