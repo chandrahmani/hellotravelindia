@@ -25,7 +25,12 @@ export const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   return (
     <Box sx={{ p: 3 }}>
-      <Typography variant="h4" textAlign="center" mb={3}>
+      <Typography
+        variant="h4"
+        textAlign="center"
+        mb={3}
+        sx={{ fontFamily: "cursive" }}
+      >
         Explore Kashmir - Tour & Travel Gallery
       </Typography>
 

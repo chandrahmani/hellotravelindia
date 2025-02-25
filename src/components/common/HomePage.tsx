@@ -27,7 +27,12 @@ const HomePage = () => {
     <div>
       <ImageSlider />
 
-      <Typography variant="h4" align="center" gutterBottom>
+      <Typography
+        variant="h4"
+        align="center"
+        gutterBottom
+        sx={{ fontFamily: "cursive" }}
+      >
         Explore Our Exclusive Travel Packages
       </Typography>
       <Grid container spacing={5} sx={{ p: 3 }}>
@@ -37,8 +42,17 @@ const HomePage = () => {
               <CardMedia>
                 <CardContent>
                   <img src={pkg.image} width={"500"} height={"200"} />
-                  <Typography variant="h6">{pkg.title}</Typography>
-                  <Typography variant="h5" color="textSecondary">
+                  <Typography
+                    variant="h6"
+                    sx={{ fontFamily: "sans-serif", fontWeight: "600" }}
+                  >
+                    {pkg.title}
+                  </Typography>
+                  <Typography
+                    variant="h5"
+                    color="textSecondary"
+                    sx={{ fontFamily: "serif" }}
+                  >
                     {pkg.description}
                   </Typography>
 
