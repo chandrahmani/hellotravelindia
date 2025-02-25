@@ -30,7 +30,7 @@ const HomePage = () => {
       <Typography variant="h4" align="center" gutterBottom>
         Explore Our Exclusive Travel Packages
       </Typography>
-      <Grid container spacing={5}>
+      <Grid container spacing={5} sx={{ p: 3 }}>
         {packages.map((pkg, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>
             <Card sx={{ mb: 5 }}>
