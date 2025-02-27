@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+import travelPackages from "../../data/data.json";
 import {
   Button,
   Card,
@@ -8,9 +10,8 @@ import {
   Typography,
 } from "@mui/material";
 import ImageSlider from "../core/modal/ImageSlider";
-import travelPackages from "../../data/data.json";
-import { useEffect, useState } from "react";
 import { Gallery } from "./Gallery";
+import ScrollButtonUp from "../core/scrollButton/ScrollButtonUp";
 
 type travelPackage = {
   title: string;
@@ -67,6 +68,7 @@ const HomePage = () => {
       </Grid>
 
       <Gallery />
+      <ScrollButtonUp />
     </div>
   );
 };
