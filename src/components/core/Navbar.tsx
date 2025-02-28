@@ -19,6 +19,7 @@ const navLinks = [
   { text: "Home", href: "/" },
   { text: "Packages", href: "/packages" },
   { text: "About", href: "/about" },
+  { text: " Privacy Policy", href: "/privacyPolicy" },
   { text: "Contact", href: "/contact" },
 ];
 
@@ -40,7 +41,7 @@ const Navbar = () => {
           sx={{
             flexGrow: 1,
             color: "#6462fc",
-            fontFamily: "sans-serif",
+            fontFamily: "serif",
             fontWeight: "600",
           }}
         >
@@ -52,12 +53,12 @@ const Navbar = () => {
             {navLinks.map((link) => (
               <Link key={link.text} href={link.href} passHref>
                 <Typography
-                  variant="button"
+                  variant="h6"
                   sx={{
                     color: "black",
                     textDecoration: "none",
                     fontWeight: "900",
-                    fontFamily: "sans-serif",
+                    fontFamily: "serif",
                     "&:hover": { color: "#1916d1" },
                   }}
                 >
