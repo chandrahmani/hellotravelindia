@@ -1,5 +1,3 @@
-"use client";
-
 import React, { useState } from "react";
 import {
   AppBar,
@@ -37,7 +35,8 @@ const Navbar = () => {
       <Toolbar>
         <Typography
           variant="h6"
-          component="div"
+          component={Link}
+          href={"/"}
           sx={{
             flexGrow: 1,
             color: "#6462fc",

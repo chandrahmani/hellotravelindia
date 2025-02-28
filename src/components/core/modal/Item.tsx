@@ -1,4 +1,4 @@
-import { Button, Paper } from "@mui/material";
+import { Paper } from "@mui/material";
 
 const Item = ({ index, item }: { index: number; item: any }) => {
   return (
@@ -7,9 +7,8 @@ const Item = ({ index, item }: { index: number; item: any }) => {
         key={index}
         src={item.url}
         alt="Slide"
-        style={{ width: "100%", height: "45vh" }}
+        style={{ width: "100%", height: "50vh" }}
       />
-      <Button className="CheckButton">Check it out!</Button>
     </Paper>
   );
 };
