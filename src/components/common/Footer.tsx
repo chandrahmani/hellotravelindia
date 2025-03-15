@@ -1,36 +1,108 @@
-import { Facebook, Instagram, LinkedIn } from "@mui/icons-material";
-import { Box, Container, IconButton, Link, Typography } from "@mui/material";
+import React from "react";
+import {
+  Box,
+  Container,
+  Grid,
+  Typography,
+  Link,
+  IconButton,
+} from "@mui/material";
+import { Facebook, Instagram, Twitter, YouTube } from "@mui/icons-material";
 
-export const Footer = () => {
+const Footer = () => {
   return (
-    <Box
-      component="footer"
-      sx={{ py: 3, textAlign: "center", background: "#333", color: "white" }}
-    >
-      <Container>
-        <Typography variant="body1">
-          <Link
-            href="https://webtechpie.com/"
-            color="inherit"
-            underline="none"
-            fontSize={15}
-          >
-            Webtechpie
-          </Link>
-          &copy; 2025 Hello Travel India All rights reserved
-        </Typography>
-        <Box sx={{ mt: 1 }}>
-          <IconButton color="inherit" href="#">
-            <Facebook />
-          </IconButton>
-          <IconButton color="inherit" href="#">
-            <Instagram />
-          </IconButton>
-          <IconButton color="inherit" href="#">
-            <LinkedIn />
-          </IconButton>
+    <Box sx={{ backgroundColor: "#333", color: "white", py: 4, mt: 4 }}>
+      <Container maxWidth="xl">
+        <Grid container spacing={3}>
+          {/* About Section */}
+          <Grid item xs={12} sm={6} md={3}>
+            <Typography variant="h6">Hello Travel India</Typography>
+            <Typography variant="body2" sx={{ mt: 1 }}>
+              Explore the beauty of Kashmir with our exclusive tour packages.
+              Experience nature, luxury, and adventure.
+            </Typography>
+          </Grid>
+
+          {/* Quick Links */}
+          <Grid item xs={12} sm={6} md={3}>
+            <Typography variant="h6">Quick Links</Typography>
+            <Link
+              href="/terms-conditions"
+              color="inherit"
+              display="block"
+              sx={{ mt: 1 }}
+              underline="none"
+            >
+              terms & conditions
+            </Link>
+            <Link
+              href="/privacy-policy"
+              color="inherit"
+              display="block"
+              sx={{ mt: 1 }}
+              underline="none"
+            >
+              privacy policy
+            </Link>
+          </Grid>
+
+          {/* Contact Info */}
+          <Grid item xs={12} sm={6} md={3}>
+            <Typography variant="h6">Contact Us</Typography>
+            <Typography variant="body2" sx={{ mt: 1 }}>
+              Phone: +91 8709517725
+            </Typography>
+            <Typography variant="body2">
+              Email: info@hellotravelindia.com
+            </Typography>
+            <Typography variant="body2">
+              Location: Srinagar, Kashmir, India
+            </Typography>
+          </Grid>
+
+          {/* Social Media */}
+          <Grid item xs={12} sm={6} md={3}>
+            <Typography variant="h6">Follow Us</Typography>
+            <Box sx={{ mt: 1 }}>
+              <IconButton color="inherit">
+                <Facebook />
+              </IconButton>
+              <IconButton color="inherit">
+                <Instagram />
+              </IconButton>
+              <IconButton color="inherit">
+                <Twitter />
+              </IconButton>
+              <IconButton color="inherit">
+                <YouTube />
+              </IconButton>
+            </Box>
+          </Grid>
+        </Grid>
+
+        {/* Copyright Section */}
+        <Box
+          sx={{
+            textAlign: "center",
+            mt: 3,
+            pt: 2,
+            borderTop: "1px solid #555",
+          }}
+        >
+          <Typography variant="body2" style={{ color: "grey" }}>
+            <Link
+              href="https://www.webtechpie.com/"
+              style={{ color: "#bdbbbb" }}
+              underline="none"
+            >
+              Webtechpie
+            </Link>
+            &copy; 2025 Hello Travel India. All Rights Reserved.
+          </Typography>
         </Box>
       </Container>
     </Box>
   );
 };
+
+export default Footer;
