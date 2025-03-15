@@ -50,13 +50,14 @@ const Footer = () => {
           <Grid item xs={12} sm={6} md={3}>
             <Typography variant="h6">Contact Us</Typography>
             <Typography variant="body2" sx={{ mt: 1 }}>
-              Phone: +91 8709517725
+              Phone: +91 7006036459 / +91 9906755156
             </Typography>
             <Typography variant="body2">
-              Email: info@hellotravelindia.com
+              Email: hellotravelsindia@gmail.com
             </Typography>
             <Typography variant="body2">
-              Location: Srinagar, Kashmir, India
+              Location: Head Office: Nowgam near railway station Srinagar Jammu
+              & Kashmir 190015
             </Typography>
           </Grid>
 
