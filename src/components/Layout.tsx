@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
-import { Footer } from "./common/Footer";
+
 import Navbar from "./core/Navbar";
+import Footer from "./common/Footer";
 
 export const Layout = ({ children }: { children: ReactNode }) => {
   return (
