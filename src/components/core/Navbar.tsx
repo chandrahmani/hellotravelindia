@@ -18,8 +18,6 @@ import Link from "next/link";
 const navLinks = [
   { text: "Home", href: "/" },
   { text: "Packages", href: "/packages" },
-  { text: "About", href: "/about" },
-  { text: " Privacy Policy", href: "/privacyPolicy" },
   { text: "Contact", href: "/contact" },
 ];
 
