@@ -7,24 +7,19 @@ import {
   Typography,
 } from "@mui/material";
 import { useEffect, useState } from "react";
-import { PackageType } from "@/utils/types";
-import axios from "axios";
+import travelPackages from "../../data/data.json";
+
+type travelPackage = {
+  title: string;
+  image: string;
+  description: string;
+};
 
 const Packages = () => {
-  const [packages, setPackages] = useState<PackageType[]>([]);
-
-  const fetchPackages = async () => {
-    try {
-      const { data } = await axios.get("/api/packages");
-      console.log(data);
-      setPackages(data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  const [packages, setPackages] = useState<travelPackage[]>([]);
 
   useEffect(() => {
-    fetchPackages();
+    setPackages(travelPackages);
   }, []);
   return (
     <Grid container spacing={5} sx={{ p: 3 }}>
@@ -40,15 +35,12 @@ const Packages = () => {
                 >
                   {pkg.title}
                 </Typography>
-                <Typography variant="h6" sx={{ fontFamily: "serif" }}>
-                  {pkg.description}
-                </Typography>
                 <Typography
                   variant="h5"
                   color="textSecondary"
                   sx={{ fontFamily: "serif" }}
                 >
-                  {pkg.price}
+                  {pkg.description}
                 </Typography>
 
                 <Button variant="contained" color="primary" sx={{ mt: 2 }}>
