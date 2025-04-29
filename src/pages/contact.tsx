@@ -1,110 +1,58 @@
 import { Gallery } from "@/components/common/Gallery";
-import {
-  Button,
-  Container,
-  Grid,
-  Paper,
-  TextField,
-  Typography,
-} from "@mui/material";
+import { Box, Button, Container, TextField, Typography } from "@mui/material";
 import { useState } from "react";
 
-const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const [errors, setErrors] = useState({ name: "", email: "", message: "" });
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-    setErrors({ ...errors, [e.target.name]: "" });
-  };
+export default function ContactPage() {
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    let validationErrors = { name: "", email: "", message: "" };
+    const message = `Hello Travel India! My name is ${name},and  i am interested in your tour packages.${phone}.`;
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappNumber = "7006036459";
 
-    if (!formData.name) validationErrors.name = "Name is required.";
-    if (!formData.email) {
-      validationErrors.email = "Email is required.";
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      validationErrors.email = "Invalid email address.";
-    }
-    if (!formData.message) validationErrors.message = "Message is required.";
-
-    if (
-      validationErrors.name ||
-      validationErrors.email ||
-      validationErrors.message
-    ) {
-      setErrors(validationErrors);
-      return;
-    }
-    console.log("Form Submitted:", formData);
-    alert("Message Sent Successfully!");
-    setFormData({ name: "", email: "", message: "" });
+    window.open(
+      `https://wa.me/${whatsappNumber}?text=${encodedMessage}`,
+      "_blank"
+    );
   };
 
   return (
     <>
-      <Container maxWidth="md" sx={{ mt: 2, p: 2 }}>
-        <Paper elevation={3} sx={{ padding: 4, borderRadius: 2 }}>
-          <Typography variant="h4" gutterBottom textAlign="center">
-            Contact Us
-          </Typography>
-
-          <form onSubmit={handleSubmit}>
-            <Grid container spacing={2}>
-              <Grid item xs={12} sm={6}>
-                <TextField
-                  fullWidth
-                  label="Name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                />
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <TextField
-                  fullWidth
-                  label="Email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                />
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <TextField
-                  fullWidth
-                  label="Message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                />
-              </Grid>
-              <Grid item xs={12} textAlign="center">
-                <Button
-                  variant="contained"
-                  color="primary"
-                  type="submit"
-                  fullWidth
-                >
-                  Send Message
-                </Button>
-              </Grid>
-            </Grid>
-          </form>
-        </Paper>
+      <Container maxWidth="sm" sx={{ mt: 5 }}>
+        <Box
+          component="form"
+          onSubmit={handleSubmit}
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            gap: 2,
+            maxWidth: 400,
+            mx: "auto",
+          }}
+        >
+          <TextField
+            label="Your Name"
+            variant="outlined"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required
+          />
+          <TextField
+            label="Your Phone Number"
+            variant="outlined"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+            required
+          />
+          <Button type="submit" variant="contained" color="primary">
+            Send to WhatsApp
+          </Button>
+        </Box>
       </Container>
       <Gallery />
     </>
   );
-};
-
-export default Contact;
+}

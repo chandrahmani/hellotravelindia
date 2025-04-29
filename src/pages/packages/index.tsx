@@ -18,9 +18,19 @@ type travelPackage = {
 const Packages = () => {
   const [packages, setPackages] = useState<travelPackage[]>([]);
 
+  const handleSubmit = (e: React.FormEvent) => {
+    const message = `Hello Travel India! And  i am interested in your tour packages.`;
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappNumber = "7006036459";
+    window.open(
+      `https://wa.me/${whatsappNumber}?text=${encodedMessage}`,
+      "_blank"
+    );
+  };
   useEffect(() => {
     setPackages(travelPackages);
   }, []);
+
   return (
     <Grid container spacing={5} sx={{ p: 3 }}>
       {packages.map((pkg, index) => (
@@ -43,7 +53,12 @@ const Packages = () => {
                   {pkg.description}
                 </Typography>
 
-                <Button variant="contained" color="primary" sx={{ mt: 2 }}>
+                <Button
+                  variant="contained"
+                  color="primary"
+                  sx={{ mt: 2 }}
+                  onClick={handleSubmit}
+                >
                   Book Now
                 </Button>
               </CardContent>
