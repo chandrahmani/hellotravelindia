@@ -24,7 +24,7 @@ const HomePage = () => {
             Explore Kashmir with Us
           </Typography>
 
-          <Typography variant="body1" color="text.secondary">
+          <Typography variant="body1">
             Explore more packages now and experience the breathtaking beauty of
             Kashmir.
           </Typography>

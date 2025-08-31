@@ -5,7 +5,7 @@ import CloseIcon from "@mui/icons-material/Close";
 const galleryImages = [
   {
     src: "https://t4.ftcdn.net/jpg/04/66/74/07/360_F_466740766_ROSqOYMWZo81wDiiABv8CoEwPDxoyUDs.jpg",
-    title: "Dal Lake, Kashmi",
+    title: "Dal Lake, Kashmir",
   },
   {
     src: "https://www.financialexpress.com/wp-content/uploads/2018/01/gulmarg-1.jpg",
