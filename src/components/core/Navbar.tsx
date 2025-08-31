@@ -14,6 +14,7 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import Link from "next/link";
+import Image from "next/image";
 
 const navLinks = [
   { text: "Home", href: "/" },
@@ -43,7 +44,7 @@ const Navbar = () => {
             fontWeight: "600",
           }}
         >
-          Hello Travel India
+         <Image src="/imageLogo.png" width={150} height={0} alt="logo"/>
         </Typography>
 
         {!isMobile && (
