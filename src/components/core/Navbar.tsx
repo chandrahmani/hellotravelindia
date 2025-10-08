@@ -44,7 +44,7 @@ const Navbar = () => {
             fontWeight: "600",
           }}
         >
-         <Image src="/imageLogo.png" width={150} height={0} alt="logo"/>
+         <Image src="/hellotravelindia-01.png" width={150} height={0} alt="logo"/>
         </Typography>
 
         {!isMobile && (
